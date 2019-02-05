@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Layout.css';
-import bannerImage from '../images/nsic.png';
+import bannerImage from '../images/bannerImage.jpeg';
+import { NavLink, HashRouter } from 'react-router-dom';
 class Header extends Component
 {
    constructor(props){
@@ -14,18 +15,23 @@ class Header extends Component
     render()
     {
         return(
-       <div className = "header-layout">
-            <div className="container">
-                <div className="brandLogo">
-                    <img src={bannerImage} className="logo"/>
-                    <a href="/" className="brandName">{this.props.ashish} </a>
+            <HashRouter>    
+                <div className = "header-layout">
+                    <div className="container">
+                        <div className="brandLogo">
+                            <img src={bannerImage} className="logo"/>
+                            <a href="/" className="brandName">{this.props.ashish} </a>
+                        </div>
+                        <ul className="navLink">
+                            <li><NavLink exact to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/faq">Faq</NavLink></li>
+                            <li><NavLink to="/support">Support</NavLink></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul className="navLink">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/contact">contact</a></li>
-                </ul>
-            </div>
-        </div>
+            </HashRouter>
         )    
     }
 }

@@ -81,3 +81,21 @@
 {
     list-style: none;
 }
+.Menu-list > li
+{
+    list-style: none;
+    background-color:brown;
+    padding: 15px;
+    border-radius: 10px;
+    color:white !important;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.Menu-list > li > a
+{ color: white;}
+a{text-decoration: none;}
+.active {
+    background-color: #7B3333;
+    padding: 25px;
+  }
